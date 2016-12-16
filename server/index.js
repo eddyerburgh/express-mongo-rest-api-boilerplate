@@ -1,8 +1,9 @@
 const app = require('./app');
+const logger = require('../lib/logger');
 
 const PORT = 8000;
 
 app.listen(PORT, () => {
-  console.info(`Server listening on port ${PORT}!`);
-  console.info('Press CTRL-C to stop\n');
+  logger.log('info',`Server listening on port ${PORT}!`);
+  logger.log('info','Press CTRL-C to stop\n');
 });

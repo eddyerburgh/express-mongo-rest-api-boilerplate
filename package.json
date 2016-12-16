@@ -2,23 +2,29 @@
   "name": "express-rest-api-boilerplate",
   "version": "1.0.0",
   "description": "Boilerplate to get an express based API running quickly",
-  "main": "index.js",
+  "main": "server/index.js",
   "repository": "https://github.com/eddyerburgh/express-rest-api-boilerplate",
   "author": "Edd Yerburgh <edward.yerburgh@gmail.com>",
   "license": "MIT",
   "scripts": {
     "lint": "eslint server lib",
     "lint:fix": "npm run lint -- --fix",
+    "start": "node server",
     "test": "npm run lint:fix"
   },
   "devDependencies": {
+    "chai": "^3.5.0",
     "eslint": "^3.12.2",
     "eslint-config-airbnb": "^13.0.0",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^2.2.3",
-    "eslint-plugin-react": "^6.8.0"
+    "eslint-plugin-react": "^6.8.0",
+    "mocha": "^3.2.0",
+    "sinon": "^1.17.6",
+    "sinon-chai": "^2.8.0"
   },
   "dependencies": {
-    "express": "^4.14.0"
+    "express": "^4.14.0",
+    "winston": "^2.3.0"
   }
 }
