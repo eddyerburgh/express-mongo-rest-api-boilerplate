@@ -7,10 +7,11 @@
   "author": "Edd Yerburgh <edward.yerburgh@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "lint": "eslint server lib",
+    "lint": "eslint server lib routes",
     "lint:fix": "npm run lint -- --fix",
     "start": "node server",
-    "test": "npm run lint:fix"
+    "test": "npm run lint:fix && npm run test-unit",
+    "test-unit": "mocha test/unit --recursive --require test/unit/.setup"
   },
   "devDependencies": {
     "chai": "^3.5.0",
@@ -20,6 +21,7 @@
     "eslint-plugin-jsx-a11y": "^2.2.3",
     "eslint-plugin-react": "^6.8.0",
     "mocha": "^3.2.0",
+    "proxyquire": "^1.7.10",
     "sinon": "^1.17.6",
     "sinon-chai": "^2.8.0"
   },
