@@ -3,8 +3,11 @@ const router = require('./router');
 const errorHandler = require('../routes/handlers/errorHandler');
 const notFoundHandler = require('../routes/handlers/notFoundHandler');
 const cors = require('cors');
+const bodyParser = require('body-parser');
 
 const app = express();
+
+app.use(bodyParser.json());
 
 app.use(cors());
 
