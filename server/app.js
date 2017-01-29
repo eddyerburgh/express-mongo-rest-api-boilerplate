@@ -8,10 +8,9 @@ const helmet = require('helmet');
 
 const app = express();
 
+// Add middleware
 app.use(bodyParser.json());
-
 app.use(helmet());
-
 app.use(cors());
 
 app.use('/', router);
