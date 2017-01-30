@@ -1,8 +1,9 @@
+const config = require('config');
 const app = require('./app');
 const db = require('../lib/db');
 const logger = require('../lib/logger');
 
-const PORT = 8080;
+const PORT = config.get('server.port');
 
 app.listen(PORT, () => {
   logger.log('info', `Server listening on port ${PORT}!`);
