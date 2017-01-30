@@ -10,9 +10,9 @@
     "lint": "eslint server lib routes",
     "lint:fix": "npm run lint -- --fix",
     "start": "node server",
-    "test": "npm run lint:fix && npm run test-unit && npm run test-integration",
-    "test-integration": "mocha test/integration --recursive --require test/integration/.setup",
-    "test-unit": "mocha test/unit --recursive --require test/unit/.setup"
+    "test": "npm run lint:fix && npm run test:unit && npm run test:integration",
+    "test:integration": "mocha test/integration --recursive --require test/integration/.setup",
+    "test:unit": "mocha test/unit --recursive --require test/unit/.setup"
   },
   "devDependencies": {
     "chai": "^3.5.0",
