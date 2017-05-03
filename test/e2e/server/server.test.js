@@ -4,7 +4,7 @@ const app = require('../../../server/app');
 describe('server', () => {
   it('GET /doesnotexist responds with 404', (done) => {
     request(app)
-        .get('/')
+        .get('/doesnotexist')
         .expect(404)
         .expect((res) => {
           expect(res.body.ok).to.be.false;
